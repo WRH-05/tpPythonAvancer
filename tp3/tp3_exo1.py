@@ -26,3 +26,7 @@ B = np.transpose(B)
 B = np.append(B,[np.array([1,5,9,2])],axis=0)
 print(f'\nB=',B)
 print(f'Determinant of B:',np.linalg.det(B))
+
+# question 4
+# discutons les resultats des questions 2 et 3
+print("Les résultats des questions 2 et 3 montrent comment les opérations de transformation de matrice peuvent affecter la structure et les propriétés d'une matrice.")
