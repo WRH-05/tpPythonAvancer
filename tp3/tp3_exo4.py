@@ -41,15 +41,12 @@ def systeme_utilisateur():
     
     n = int(input("\nNombre d'equations (2-5): "))
     
-    A = np.zeros((n, n))
-    b = np.zeros(n)
+    print(f"\nEntrez la matrice des coefficients A ({n}x{n}):")
+    print(f"(valeurs separees par des virgules, ex: 1,2,3,4 pour une matrice 2x2)")
+    A = np.fromstring(input(), sep=",").reshape(n, n)
     
-    print("\nSaisie des coefficients:")
-    for i in range(n):
-        print(f"\nEquation {i+1}:")
-        for j in range(n):
-            A[i][j] = float(input(f"  Coefficient {j+1}: "))
-        b[i] = float(input(f"  Constante: "))
+    print(f"\nEntrez le vecteur b ({n} valeurs separees par des virgules):")
+    b = np.fromstring(input(), sep=",")
     
     solution = resoudre_systeme(A, b)
     

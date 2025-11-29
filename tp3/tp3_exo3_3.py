@@ -1,9 +1,9 @@
 # tp3_ex03_3.py
-# 3ème méthode
-import pandas as pd
+# Demander la saisie d'une matrice
+import numpy as np
 
 rows = int(input("Enter the number of rows: "))
-print("Enter the matrix values separated by ; followed by newline:")
-data = [input().split(';') for _ in range(rows)]
-df = pd.DataFrame(data)
-print(df)
+cols = int(input("Enter the number of columns: "))
+
+matrix = np.fromstring(input(), sep=",").reshape(rows, cols)
+print(matrix)
